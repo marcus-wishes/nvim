@@ -110,5 +110,7 @@ return require('packer').startup(function(use)
   -- colorizer (simply shows the color as background of a color definition)
   use 'norcalli/nvim-colorizer.lua'
 
+  -- buffer/tabline
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
 end)

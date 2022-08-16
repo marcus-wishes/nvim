@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -78,6 +83,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
   ["copilot-cmp"] = {
     loaded = false,
@@ -124,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
+  ["neosolarized.nvim"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
+    url = "https://github.com/svrana/neosolarized.nvim"
+  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -133,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -153,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
