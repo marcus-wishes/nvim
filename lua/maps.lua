@@ -20,3 +20,5 @@ keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true }) -
 -- keymaps from cmp are in the after/plugin/cmp.lua file
 -- keymaps from telescope are in the after/plugin/telescope.lua file
 
+-- switch material color schema
+keymap.set('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]], { noremap = true, silent = true })

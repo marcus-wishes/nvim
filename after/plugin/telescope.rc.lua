@@ -16,6 +16,7 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
+	file_ignore_patterns = { "node_modules" },
   },
   extensions = {
     file_browser = {

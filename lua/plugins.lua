@@ -96,14 +96,7 @@ return require('packer').startup(function(use)
     "zbirenbaum/copilot-cmp",
     module = "copilot_cmp",
   }
-  
-  -- neo solarized theme
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
-
-  -- autotag and autopairs
+ -- autotag and autopairs
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   
@@ -117,5 +110,13 @@ return require('packer').startup(function(use)
   -- which-key (keybindings) popup
   use 'folke/which-key.nvim'
 
+  
+  -- neo solarized theme
+  --[[use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+  --]]
+  use 'marko-cerovac/material.nvim'
 
 end)
