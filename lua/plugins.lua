@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
   --]]
   -- neo-tree
   use {
-  "nvim-neo-tree/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     requires = { 
       "nvim-lua/plenary.nvim",
@@ -70,10 +70,11 @@ return require('packer').startup(function(use)
   }
   
   -- github copilot
-  use 'github/copilot.vim'
+  -- use 'github/copilot.vim'
   -- then:
   use {
     "zbirenbaum/copilot.lua",
+	-- requires = { 'github/copilot.vim'},
     event = {"VimEnter"},
     config = function()
       vim.defer_fn(function()
@@ -95,7 +96,7 @@ return require('packer').startup(function(use)
     "zbirenbaum/copilot-cmp",
     module = "copilot_cmp",
   }
-
+  
   -- neo solarized theme
   use {
     'svrana/neosolarized.nvim',
@@ -112,5 +113,9 @@ return require('packer').startup(function(use)
 
   -- buffer/tabline
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+  -- which-key (keybindings) popup
+  use 'folke/which-key.nvim'
+
 
 end)

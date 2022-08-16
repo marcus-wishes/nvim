@@ -38,3 +38,5 @@ vim.opt.background = 'dark'
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
 
+-- timeout after whichkey keybinding popup (plugin) appears
+vim.opt.timeoutlen = 150
