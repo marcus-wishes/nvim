@@ -12,6 +12,11 @@ keymap.set('n', '<leader>bn', ':tabnew<CR>', { noremap = true }) -- new tab
 -- splits
 keymap.set('n', '<leader>sp', ':sp', { noremap = true }) -- split horizontally
 keymap.set('n', '<leader>sv', ':vsp', { noremap = true }) -- split vertically
+keymap.set('n', '<leader>*', ':resize +5<CR>', { noremap = true }) -- grow split horizontally
+keymap.set('n', '<leader>_', ':resize -5<CR>', {noremap = true}) -- shrink split horizontally
+keymap.set('n', '<leader>+', ':vertical resize +5<CR>', {noremap = true}) -- shrink split vertically
+keymap.set('n', '<leader>-', ':vertical resize -5<CR>', {noremap = true}) -- resize to equal size
+
 
 -- bufferline plugin (shows better tabs)
 keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', { noremap = true }) -- next tab
