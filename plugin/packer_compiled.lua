@@ -99,6 +99,16 @@ _G.packer_plugins = {
     path = "/home/markus/.local/share/nvim/site/pack/packer/opt/copilot.lua",
     url = "https://github.com/zbirenbaum/copilot.lua"
   },
+  ["goto-preview"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/goto-preview",
+    url = "https://github.com/rmagatti/goto-preview"
+  },
+  ["indent-blankline.vim"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/indent-blankline.vim",
+    url = "https://github.com/lukas-reineke/indent-blankline.vim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -138,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -188,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/markus/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/markus/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["which-key.nvim"] = {
     loaded = true,

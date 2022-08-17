@@ -46,6 +46,7 @@ cmp.setup({
     { name = 'nvim_lsp', group_index = 2 },
     { name = 'buffer' },
 	{ name = 'path', group_index = 2 },
+	{ name = 'cmdline', group_index = 2 },
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
@@ -68,8 +69,27 @@ cmp.setup({
       cmp.config.compare.length,
       cmp.config.compare.order,
     }
-  }
+  },
 })
+
+
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
 
 --[[
 vim.cmd [[

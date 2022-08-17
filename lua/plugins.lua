@@ -12,6 +12,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  
+  -- dev icon
+  use 'kyazdani42/nvim-web-devicons'
+
+  -- material theme
+  use 'marko-cerovac/material.nvim'
 
   -- treesitter
   use {
@@ -37,10 +43,7 @@ return require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
 
-  -- dev icon
-  use 'kyazdani42/nvim-web-devicons'
-
-  -- file system tree .. replaced by neo-tree
+    -- file system tree .. replaced by neo-tree
   --[[ use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -99,6 +102,12 @@ return require('packer').startup(function(use)
  -- autotag and autopairs
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+
+  -- trouble plugin which shows lines making problems
+  use { 
+	  'folke/trouble.nvim',
+	  requires = { 'kyazdani42/nvim-web-devicons' },
+  }
   
   
   -- colorizer (simply shows the color as background of a color definition)
@@ -107,16 +116,17 @@ return require('packer').startup(function(use)
   -- buffer/tabline
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
+
+  -- floating goto window for goto-line
+  use {
+	  'rmagatti/goto-preview',
+	  requires = { 'nvim-telescope/telescope.nvim'}
+  }
+
+  -- show indentation guides
+  use 'lukas-reineke/indent-blankline.nvim'
+
   -- which-key (keybindings) popup
   use 'folke/which-key.nvim'
-
-  
-  -- neo solarized theme
-  --[[use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
-  --]]
-  use 'marko-cerovac/material.nvim'
 
 end)
