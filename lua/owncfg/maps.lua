@@ -14,9 +14,9 @@ local keymap = vim.keymap
 -- keymap.set('n', '<leader>sp', ':sp', { noremap = true }) -- split horizontally
 -- keymap.set('n', '<leader>sv', ':vsp', { noremap = true }) -- split vertically
 keymap.set('n', '<leader>*', ':resize +5<CR>', { noremap = true }) -- grow split horizontally
-keymap.set('n', '<leader>_', ':resize -5<CR>', {noremap = true}) -- shrink split horizontally
-keymap.set('n', '<leader>+', ':vertical resize +5<CR>', {noremap = true}) -- shrink split vertically
-keymap.set('n', '<leader>-', ':vertical resize -5<CR>', {noremap = true}) -- resize to equal size
+keymap.set('n', '<leader>_', ':resize -5<CR>', { noremap = true }) -- shrink split horizontally
+keymap.set('n', '<leader>+', ':vertical resize +5<CR>', { noremap = true }) -- shrink split vertically
+keymap.set('n', '<leader>-', ':vertical resize -5<CR>', { noremap = true }) -- resize to equal size
 
 
 -- bufferline plugin (shows better tabs)
@@ -60,9 +60,12 @@ whichkey.register({
 	f = {
 		name = "file (telescope)", -- group name
 		f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
-	    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" }, -- additional options for creating the keymap
+		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" }, -- additional options for creating the keymap
 		d = { "<cmd>Telescope find_directories<cr>", "Find Directory" },
-		b = { "<cmd>NeoTreeShow<cr>", "File Browser" },
+		i = { "<cmd>Telescope live_grep<cr>", "Find * in files." },
+		e = { "<cmd>Telescope diagnostics<cr>", "Find files with problems." },
+		b = { "<cmd>Telescope file_browser<cr>", "File Browser" },
+		t = { "<cmd>NeoTreeShow<cr>", "File Directory Tree" }
 	},
 	m = {
 		name = "material-theme",
@@ -97,8 +100,8 @@ whichkey.register({
 		n = { "vim.diagnostic.goto_next", "Next Diagnostic" },
 		l = { "vim.diagnostic.setloclist", "Set Diagnostic Loclist" },
 	}, --]]
-	t = { 
-		name= "tabs",
+	t = {
+		name = "tabs",
 		t = { "<cmd>tabnext<cr>", "Next Tab" },
 		T = { "<cmd>tabprev<cr>", "Previous Tab" },
 	},
