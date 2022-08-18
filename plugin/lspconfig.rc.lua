@@ -72,10 +72,16 @@ nvim_lsp.flow.setup {
   capabilities = capabilities
 }
 
+-- setup the right language server cmd
+local ts_server_cmd = "typescript-language-server"
+if vim.fn.has("win32") then
+	ts_server_cmd = "typescript-language-server.cmd"
+end
+
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" },
+  cmd = { ts_server_cmd, "--stdio" },
   capabilities = capabilities
 }
 
