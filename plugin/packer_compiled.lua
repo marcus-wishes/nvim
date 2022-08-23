@@ -79,10 +79,30 @@ _G.packer_plugins = {
     path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["cmp-spell"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-spell",
+    url = "https://github.com/f3fora/cmp-spell"
   },
   ["copilot-cmp"] = {
     loaded = false,
@@ -99,10 +119,25 @@ _G.packer_plugins = {
     path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\copilot.lua",
     url = "https://github.com/zbirenbaum/copilot.lua"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
   ["goto-preview"] = {
     loaded = true,
     path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\goto-preview",
     url = "https://github.com/rmagatti/goto-preview"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\Markus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,

@@ -1,5 +1,5 @@
 # Markus' NVIM Setup
-Heavily inspired by [this](https://github.com/craftzdog/dotfiles-public/tree/master/.config/nvim).
+Heavily inspired by [CraftzDog](https://github.com/craftzdog/dotfiles-public/tree/master/.config/nvim), and [Allaman] (https://github.com/Allaman/nvim).
 Focussed on Typescript, React.
 Uses Github Copilot.
 

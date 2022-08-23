@@ -12,6 +12,18 @@ if (not status) then
   return
 end
 
+packer.init({
+  enable = true, -- enable profiling via :PackerCompile profile=true
+  threshold = 0, -- the amount in ms that a plugins load time must be over for it to be included in the profile
+  max_jobs = 20, -- Limit the number of simultaneous jobs. nil means no limit. Set to 20 in order to prevent PackerSync form being "stuck" -> https://github.com/wbthomason/packer.nvim/issues/746
+  -- Have packer use a popup window
+  display = {
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+    end,
+  },
+})
+
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -41,9 +53,25 @@ return require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovims built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
+  
+  use({
+    "hrsh7th/nvim-cmp", -- Completion
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",   -- nvim-cmp source for neovims built-in LSP
+      "hrsh7th/cmp-buffer", -- current buffer words source
+      "hrsh7th/cmp-path", -- path sources
+      "hrsh7th/cmp-cmdline", -- cmd line sources
+      "f3fora/cmp-spell", -- spellchecker
+      "hrsh7th/cmp-nvim-lsp-signature-help", -- function signature helper
+	  -- additionally i use copilot, which is defined later
+    },
+  })
+  
+  -- golang
+  use({ 
+      "ray-x/go.nvim", 
+	  requires = "ray-x/guihua.lua",
+  })
   
   -- mason
   use 'williamboman/mason.nvim'
@@ -83,7 +111,6 @@ return require('packer').startup(function(use)
   -- then:
   use {
     "zbirenbaum/copilot.lua",
-	-- requires = { 'github/copilot.vim'},
     event = {"VimEnter"},
     config = function()
       vim.defer_fn(function()

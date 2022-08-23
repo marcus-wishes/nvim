@@ -26,11 +26,11 @@ cmp.setup({
       border = border "CmpDocBorder",
     },
   },
-  snippet = {
+  --[[snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end,
-  },
+  },--]]
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -42,11 +42,13 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
-	{ name = 'copilot', group_index = 2 },
-    { name = 'nvim_lsp', group_index = 2 },
+    { name = 'spell' },
+	{ name = 'nvim_lsp_signature_help' }, -- function signature help with current function parameter highlighted
+	{ name = 'copilot' },
+    { name = 'nvim_lsp' },
     { name = 'buffer' },
-	{ name = 'path', group_index = 2 },
-	{ name = 'cmdline', group_index = 2 },
+	{ name = 'path' },
+	{ name = 'cmdline' }
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
@@ -71,6 +73,10 @@ cmp.setup({
     }
   },
 })
+
+-- for spell we need to set a language:
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
 
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
