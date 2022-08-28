@@ -164,4 +164,15 @@ return require('packer').startup(function(use)
 	-- which-key (keybindings) popup
 	use 'folke/which-key.nvim'
 
+	-- markdown preview
+	use {
+		'iamcco/markdown-preview.nvim',
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+			vim.g.mkdp_auto_start = 1
+			vim.g.mkdp_auto_close = 1
+		end, ft = { "markdown" },
+	}
+
 end)
